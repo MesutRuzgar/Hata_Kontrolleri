@@ -28,10 +28,14 @@ namespace Hata_Kontrolleri
                 label3.Text = sonuc.ToString();
 
             }
-            catch (Exception hata)
+            catch (Exception)
             {
 
-                MessageBox.Show(hata.ToString(),"Hata!", (MessageBoxButtons.OK),MessageBoxIcon.Error);
+                MessageBox.Show("Hata var burası çalıştı", "Hata!", (MessageBoxButtons.OK), MessageBoxIcon.Error);
+            }
+            finally
+            {
+                MessageBox.Show("fianlly çalıştı", "Hata!", (MessageBoxButtons.OK), MessageBoxIcon.Error);
             }
 
         }
